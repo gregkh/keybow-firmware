@@ -1,5 +1,19 @@
 #include "lights.h"
 
+char buf[BUF_SIZE];
+
+int x, y;
+
+int width, height;
+png_byte color_type;
+png_byte bit_depth;
+png_byte color_channels;
+
+png_structp png_ptr;
+png_infop info_ptr;
+int number_of_passes;
+png_bytep * row_pointers;
+
 unsigned long long millis(){
     struct timeval tv;
     gettimeofday(&tv, NULL);

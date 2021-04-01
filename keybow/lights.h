@@ -20,19 +20,19 @@
 #define SPI_SPEED_HZ 4000000
 #define MIN_DELAY_US 500
 
-char buf[BUF_SIZE];
+extern char buf[BUF_SIZE];
 
-int x, y;
+extern int x, y;
 
-int width, height;
-png_byte color_type;
-png_byte bit_depth;
-png_byte color_channels;
+extern int width, height;
+extern png_byte color_type;
+extern png_byte bit_depth;
+extern png_byte color_channels;
 
-png_structp png_ptr;
-png_infop info_ptr;
-int number_of_passes;
-png_bytep * row_pointers;
+extern png_structp png_ptr;
+extern png_infop info_ptr;
+extern int number_of_passes;
+extern png_bytep * row_pointers;
 
 unsigned long long millis();
 void lights_setPixel(int x, int r, int g, int b);
