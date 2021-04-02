@@ -6,6 +6,13 @@
 #include <usbg/function/hid.h>
 #include <usbg/function/midi.h>
 
+usbg_state *s;
+usbg_gadget *g;
+usbg_config *c;
+usbg_function *f_hid;
+usbg_function *f_midi;
+usbg_function *f_acm0;
+
 static char report_desc[] = {
     0x05, 0x01, // USAGE_PAGE (Generic Desktop)
     0x09, 0x06, // USAGE (Keyboard)

@@ -8,20 +8,20 @@
 
 #pragma once
 
-int hid_output;
-int midi_output;
-int has_tick;
-unsigned long long tick_start;
-lua_State* L;
+extern int hid_output;
+extern int midi_output;
+extern int has_tick;
+extern unsigned long long tick_start;
+extern lua_State* L;
 
-unsigned short last_media_keys;
-unsigned short media_keys;
-unsigned short modifiers;
-unsigned short pressed_keys[14];
+extern unsigned short last_media_keys;
+extern unsigned short media_keys;
+extern unsigned short modifiers;
+extern unsigned short pressed_keys[14];
 
-unsigned short mouse_buttons;
-signed short mouse_x;
-signed short mouse_y;
+extern unsigned short mouse_buttons;
+extern signed short mouse_x;
+extern signed short mouse_y;
 
 int initLUA();
 void luaTick(void);

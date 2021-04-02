@@ -24,6 +24,13 @@ int running = 0;
 int key_index = 0;
 
 pthread_t t_run_lights;
+pthread_mutex_t lights_mutex;
+
+unsigned short last_state[NUM_KEYS];
+
+int lights_auto;
+
+unsigned short mapping_table[36];
 
 void signal_handler(int dummy) {
     running = 0;
